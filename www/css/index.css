@@ -1,0 +1,44 @@
+:root {
+	--branco: #ffff;
+	--gelo: #f1f1f1;
+	--verde: #19c463;
+	--preto: #2a2a2a;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+	font-family: "Bebas Neue", sans-serif;
+}
+
+/* TAB BAR */
+
+.toolbar{
+    height: 80px;
+    background: var(--preto);
+}
+
+.tab-link{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.toolbar-inner .link{    
+    flex:1;
+    height: 10px;  
+    line-height: 25px; 
+	font-weight:bold;  
+    color: var(--verde);  
+}
+
+.toolbar-inner .link:not(.active){
+    color: var(--branco);
+	font-weight:normal;
+}
+
+.toolbar-inner > .link i{
+    font-size: 36px;
+}
+
+/* BANNER CARD */
