@@ -18,7 +18,7 @@
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
     <!--Ícones do Remix Icon-->
-	<link rel="stylesheet" href="css/remixicon/remixicon.css">
+    <link rel="stylesheet" href="css/remixicon/remixicon.css">
 
 
 </head>
@@ -52,18 +52,33 @@
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="index" class="page color-theme-blue">
 
-                <!-- Top Navbar -->
-                <div class="navbar">
-                    <div class="navbar-bg"></div>
-                    <div class="navbar-inner justify-content-center">
-                        <div class="title ">Template Tab</div>
-                    </div>
-                </div>
+                <!-- Menu Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide menu">Menu slide</div>
+                        <div class="swiper-slide content">
+                            <div class="menu-button">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <!-- Top Navbar -->
+                            <div class="navbar-container">
+                                <div class="nb-content">
+                                    <div class="navbar-inner justify-content-center">
+                                        <div class="nb-title">Popo<span>M<i class="ri-money-dollar-circle-line"></i>ney</span></div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <!-- Scrollable page content -->
-                <div class="page-content">
-                    <div class="block">
-                        Conteúdo do link 1
+                            <!-- Scrollable page content -->
+                            <div class="page-content">
+                                <div class="block">
+                                    conteudo resumo
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,8 +86,8 @@
     </div>
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
-	<!-- jQuery -->
-	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
     <!-- Roteamento do app-->
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="cordova.js"></script>
