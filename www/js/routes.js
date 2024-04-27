@@ -24,42 +24,15 @@ var app = new Framework7({
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
+
         },
         pageAfterIn: function (event, page) {
           // fazer algo depois da página ser exibida
+
         },
         pageInit: function (event, page) {
           // fazer algo quando a página for inicializada
           $.getScript('js/index.js');
-
-          var menuButton = document.querySelector('.menu-button');
-          var openMenu = function () {
-            swiper.slidePrev();
-          };
-          var swiper = new Swiper('.swiper', {
-            slidesPerView: 'auto',
-            initialSlide: 1,
-            resistanceRatio: 0,
-            slideToClickedSlide: true,
-            on: {
-              slideChangeTransitionStart: function () {
-                var slider = this;
-                if (slider.activeIndex === 0) {
-                  menuButton.classList.add('cross');
-                  // required because of slideToClickedSlide
-                  menuButton.removeEventListener('click', openMenu, true);
-                } else {
-                  menuButton.classList.remove('cross');
-                }
-              },
-              slideChangeTransitionEnd: function () {
-                var slider = this;
-                if (slider.activeIndex === 1) {
-                  menuButton.addEventListener('click', openMenu, true);
-                }
-              },
-            },
-          });
         },
         pageBeforeRemove: function (event, page) {
           // fazer algo antes da página ser removida do DOM
@@ -67,9 +40,9 @@ var app = new Framework7({
       }
     },
     {
-      path: '/link2/',
-      url: 'link2.html',
-      animate: false,
+      path: '/menu-login/',
+      url: 'menu-login.html',
+      animate: true,
       on: {
         pageBeforeIn: function (event, page) {
           // fazer algo antes da página ser exibida
@@ -86,8 +59,47 @@ var app = new Framework7({
       }
     },
     {
-      path: '/link3/',
-      url: 'link3.html',
+      path: '/menu-config/',
+      url: 'menu-config.html',
+      animate: true,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
+    },
+    {
+      path: '/pagamento/',
+      url: 'pagamento.html',
+      animate: false,
+      on: {
+        pageBeforeIn: function (event, page) {
+          // fazer algo antes da página ser exibida
+
+        },
+        pageAfterIn: function (event, page) {
+          // fazer algo depois da página ser exibida
+        },
+        pageInit: function (event, page) {
+          // fazer algo quando a página for inicializada
+        },
+        pageBeforeRemove: function (event, page) {
+          // fazer algo antes da página ser removida do DOM
+        },
+      }
+    },
+    {
+      path: '/vale/',
+      url: 'vale.html',
       animate: false,
       on: {
         pageBeforeIn: function (event, page) {

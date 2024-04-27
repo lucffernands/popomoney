@@ -3,6 +3,7 @@
     --gelo: #f1f1f1;
     --verde: #19c463;
     --preto: #2a2a2a;
+    --grafite: #404040;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -11,39 +12,52 @@ body {
     font-family: "Bebas Neue", sans-serif;
 }
 
+.page-content {
+    background: var(--grafite);
+    position: relative;
+    z-index: -1;
+}
+
+.block {
+    color: var(--branco);
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /***** TAB BAR *****/
 
 .toolbar {
-    height: 80px;
+    height: 100px;
     background: var(--preto);
 }
 
 .tab-link {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-flow: column wrap;
 }
 
 .toolbar-inner .link {
     flex: 1;
-    height: 10px;
-    line-height: 25px;
     color: var(--verde);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .toolbar-inner .link:not(.active) {
     color: var(--branco);
+    font-size: 10px;
 }
 
-.toolbar-inner>.link i {
-    font-size: 34px;
+.toolbar-inner .link i {
+    font-size: 28px;
 }
 
 /**** NAV BAR ****/
 .navbar-container {
     background: var(--preto);
-    height: 65px;
+    height: 100px;
     position: relative;
     z-index: -1;
 }
@@ -52,8 +66,6 @@ body {
     font-size: 32px;
     font-weight: bold;
     color: var(--branco);
-    position: relative;
-    left: 40px;
 }
 
 .nb-title span {
@@ -71,118 +83,35 @@ body {
     
 }
 
-/* MENU BAR */
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: var(--branco);
-}
-
-.menu {
-    min-width: 100px;
-    width: 70%;
-    max-width: 320px;
-    background-color: var(--verde);
-    color: var(--branco);
-}
-
-.content {
-    width: 100%;
-}
-
-.menu-button {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    padding: 15px;
-
-    cursor: pointer;
-
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-
-    background-color: var(--verde);
-
-    margin: 14px;
-          border-radius: 5px;
-}
-
-.menu-button .bar:nth-of-type(1) {
-    margin-top: 0px;
-}
-
-.menu-button .bar:nth-of-type(3) {
-    margin-bottom: 0px;
-}
-
-.bar {
-    position: relative;
-    display: block;
-
-    width: 50px;
-    height: 5px;
-
-    margin: 10px auto;
-    background-color: var(--branco);
-
-    border-radius: 10px;
-
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-}
-
-.menu-button:hover .bar:nth-of-type(1) {
-    -webkit-transform: translateY(1.5px) rotate(-4.5deg);
-    -ms-transform: translateY(1.5px) rotate(-4.5deg);
-    transform: translateY(1.5px) rotate(-4.5deg);
-}
-
-.menu-button:hover .bar:nth-of-type(2) {
-    opacity: 0.9;
-}
-
-.menu-button:hover .bar:nth-of-type(3) {
-    -webkit-transform: translateY(-1.5px) rotate(4.5deg);
-    -ms-transform: translateY(-1.5px) rotate(4.5deg);
-    transform: translateY(-1.5px) rotate(4.5deg);
-}
-
-.cross .bar:nth-of-type(1) {
-    -webkit-transform: translateY(15px) rotate(-45deg);
-    -ms-transform: translateY(15px) rotate(-45deg);
-    transform: translateY(15px) rotate(-45deg);
-}
-
-.cross .bar:nth-of-type(2) {
-    opacity: 0;
-}
-
-.cross .bar:nth-of-type(3) {
-    -webkit-transform: translateY(-15px) rotate(45deg);
-    -ms-transform: translateY(-15px) rotate(45deg);
-    transform: translateY(-15px) rotate(45deg);
-}
-
-.cross:hover .bar:nth-of-type(1) {
-    -webkit-transform: translateY(13.5px) rotate(-40.5deg);
-    -ms-transform: translateY(13.5px) rotate(-40.5deg);
-    transform: translateY(13.5px) rotate(-40.5deg);
-}
-
-.cross:hover .bar:nth-of-type(2) {
-    opacity: 0.1;
-}
-
-.cross:hover .bar:nth-of-type(3) {
-    -webkit-transform: translateY(-13.5px) rotate(40.5deg);
-    -ms-transform: translateY(-13.5px) rotate(40.5deg);
-    transform: translateY(-13.5px) rotate(40.5deg);
-}
-
 /**** Conteudo Resumo *****/
+.saldo-mes-container {
+    width: 100%;
+    height: 100px;
+}
+
+.saldo-mes-card {
+    background: var(--gelo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    border: 1px solid var(--grafite);
+    border-radius: 5px;
+    box-shadow:1px 1px 5px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+.saldo-mes-valor {
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.saldo-mes-data {
+    color: var(--grafite);
+    font-size: 12px;
+}
+
+.saldo-mes-titulo {
+    font-size: 16px;
+}
